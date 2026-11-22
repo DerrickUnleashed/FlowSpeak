@@ -17,5 +17,5 @@ trap cleanup EXIT INT TERM
 ) &
 BACKEND_PID=$!
 
-cd "$ROOT_DIR/Frontend/FLOWSpeak"
+cd "$ROOT_DIR/frontend"
 npm run dev
