@@ -1,3 +1,5 @@
 commit.sh
 graphify-out/
 docs/
+*/.DS_Store
+.DS_Store
