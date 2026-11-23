@@ -1,16 +1,19 @@
 <div align="center">
 
 <!-- Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2AF598,100:009EFD&height=300&section=header&text=FLOWspeak&fontSize=70&animation=fadeIn&fontAlignY=38&desc=Speech%2C%20in%20Momentum&descAlignY=55&descAlign=50" width="100%" />
+<img width="2048" height="768" alt="image" src="https://github.com/user-attachments/assets/a2ba3e9c-faa9-44db-8208-7abc9802ce1c" />
 
 <!-- Badges -->
+### FLOWspeak is a real-time speech intelligence prototype that makes disfluency visible, measurable, and trainable. It has live stutter detection, next-word guidance, and paced reading therapy.
+
+<img width="1904" height="956" alt="image" src="https://github.com/user-attachments/assets/c34312fd-6e70-44aa-958c-7710a357d6d5" />
+
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-
 </div>
 
-FLOWspeak is a real-time speech intelligence prototype that makes disfluency visible, measurable, and trainable. It has two working demo labs: one for live stutter detection and next-word guidance, and one for paced reading therapy.
+
 
 ## Key Features
 
