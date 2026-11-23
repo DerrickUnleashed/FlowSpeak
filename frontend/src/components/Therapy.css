@@ -1,237 +1,152 @@
-/* Therapy.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --primary-color: #6d28d9; /* Main purple */
-  --primary-light: #8b5cf6; /* Lighter purple */
-  --primary-dark: #5b21b6; /* Darker purple */
-  --text-color: #1f2937;
-  --bg-color: #f9fafb;
-  --highlight-color: #8b5cf6;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-.Therapy-container {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+.therapy {
   position: relative;
-  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  padding: calc(var(--nav-h) + var(--space-6)) 0 var(--space-8);
+  overflow-x: clip;
 }
-
-/* Wave canvas */
-.waves-canvas {
+.therapy-waves {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 150px;
+  height: 160px;
   pointer-events: none;
-  z-index: -1;
+  opacity: .8;
+}
+.therapy-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px !important;
+}
+.therapy-head { text-align: center; margin-bottom: var(--space-6); }
+.therapy-head .eyebrow { justify-content: center; }
+.therapy-title { font-size: clamp(2.8rem, 7vw, 6rem); margin-bottom: var(--space-3); }
+.therapy-head .lead { margin-inline: auto; }
+
+.therapy-error {
+  border-left: 2px solid var(--danger);
+  padding-left: var(--space-3);
+  color: var(--danger);
+  margin-bottom: var(--space-4);
 }
 
-/* Header styles */
-.header {
-  text-align: center;
-  margin-bottom: 40px;
-  padding-top: 20px;
-}
-
-.app-title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 8px;
-}
-
-.app-subtitle {
-  font-size: 1.2rem;
-  color: #6b7280;
-  font-weight: 400;
-}
-
-/* Main content */
-.main-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-}
-
-/* Text display */
-.text-display {
-  background-color: white;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  max-height: 60vh;
-}
-
-.text-container {
+.therapy-reader {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: var(--space-5);
   max-height: 55vh;
-  overflow-y: auto;
-  padding-right: 10px;
+  overflow: hidden;
 }
-
-.text-container p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text-color);
+.therapy-text { max-height: calc(55vh - 4rem); overflow-y: auto; padding-right: var(--space-3); }
+.therapy-text p {
+  font-size: var(--step-1);
+  line-height: 1.8;
+  letter-spacing: -.01em;
 }
-
-.spoken-text {
-  color: var(--primary-color);
-  font-weight: 500;
-  /* Smooth transition for highlighting */
-  transition: color 0.3s ease;
-}
-
-.unspoken-text {
-  color: rgba(31, 41, 55, 0.8);
-  /* Smooth transition for highlighting */
-  transition: color 0.3s ease;
-}
-
-/* Add visual cue for current position */
-.spoken-text::after {
+.therapy-spoken { color: var(--accent-high); }
+.therapy-spoken::after {
   content: '';
   display: inline-block;
-  width: 4px;
-  height: 1.1em;
-  background-color: var(--primary-color);
+  width: 3px;
+  height: 1em;
+  background: var(--accent-high);
   margin-left: 2px;
   vertical-align: middle;
-  animation: blink 1s infinite;
+  animation: therapy-blink 1s steps(1) infinite;
 }
+.therapy-unspoken { color: var(--muted); }
+@keyframes therapy-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
+.therapy-text::-webkit-scrollbar { width: 6px; }
+.therapy-text::-webkit-scrollbar-track { background: transparent; }
+.therapy-text::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 3px; }
 
-/* Controls section */
-.controls {
-  margin-top: auto;
-  padding-top: 20px;
-}
-
-.time-display {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #6b7280;
-  margin-bottom: 15px;
-}
-
-.control-buttons {
+.therapy-pace {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+  gap: var(--space-3);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: var(--space-3) var(--space-4);
+  margin-top: var(--space-4);
 }
+.therapy-pace-label {
+  font-size: var(--step--1);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent-main);
+}
+.therapy-pace-controls { display: flex; align-items: center; gap: var(--space-2); }
+.therapy-icon-btn {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  transition: border-color var(--t-fast), background var(--t-fast);
+}
+.therapy-icon-btn:hover:not(:disabled) { border-color: var(--accent-main); background: var(--surface-2); }
+.therapy-icon-btn:disabled { opacity: .35; cursor: not-allowed; }
+.therapy-pace-btn {
+  min-height: 36px;
+  padding: .4rem 1rem;
+  border: 1px solid var(--accent-low);
+  color: var(--text);
+  font-size: var(--step--1);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  transition: background var(--t-fast), color var(--t-fast);
+}
+.therapy-pace-btn:hover { background: var(--accent-low); }
+.therapy-pace-btn.is-active { background: var(--danger); border-color: var(--danger); color: var(--bg); }
 
-.control-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
+.therapy-controls {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6b7280;
-  transition: color 0.2s;
+  gap: var(--space-7);
+  margin-top: var(--space-6);
 }
-
-.control-btn:hover {
-  color: var(--primary-color);
+.therapy-time, .therapy-speed {
+  font-size: var(--step-0);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
-
-.record-btn {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  color: white;
+.therapy-speed { border-bottom: 1px solid var(--line-strong); padding-bottom: .2rem; }
+.therapy-record {
   position: relative;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--accent-main);
+  color: var(--bg);
+  display: grid;
+  place-items: center;
+  transition: transform var(--t-fast) var(--ease-out), background var(--t-fast);
 }
-
-.record-btn:hover {
-  background-color: var(--primary-dark);
-  color: white;
-}
-
-.visualizer {
+.therapy-record:hover { transform: scale(1.06); }
+.therapy-record.is-recording { background: var(--danger); }
+.therapy-visualizer {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   pointer-events: none;
 }
+.therapy-record-icon { position: relative; z-index: 2; }
 
-.control-icon {
-  position: relative;
-  z-index: 2;
+@media (max-width: 600px) {
+  .therapy-controls { gap: var(--space-5); }
+  .therapy-record { width: 72px; height: 72px; }
+  .therapy-reader { padding: var(--space-4); }
 }
 
-.speed-btn {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #6b7280;
-}
-
-.speed-btn:hover {
-  color: var(--primary-color);
-}
-
-.volume-btn svg {
-  stroke: currentColor;
-}
-
-/* Scrollbar styling */
-.text-container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.text-container::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.text-container::-webkit-scrollbar-thumb {
-  background: #ddd;
-  border-radius: 4px;
-}
-
-.text-container::-webkit-scrollbar-thumb:hover {
-  background: #ccc;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .app-title {
-    font-size: 2.5rem;
-  }
-  
-  .app-subtitle {
-    font-size: 1rem;
-  }
-  
-  .text-container p {
-    font-size: 1rem;
-  }
+@media (prefers-reduced-motion: reduce) {
+  .therapy-spoken::after { animation: none; }
 }
