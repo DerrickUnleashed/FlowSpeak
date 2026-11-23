@@ -10,7 +10,6 @@ import './App.css';
 
 const navLinks = [
   { label: 'Home', to: '/' },
-  { label: 'Stutter Help', to: '/stutter-help' },
   { label: 'Therapy', to: '/therapy' },
 ];
 
