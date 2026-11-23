@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { marketing } from '../../content/marketing';
 import { initMotion, destroyMotion, prefersReducedMotion } from '../../lib/motion';
 import './Hero.css';
@@ -48,7 +49,7 @@ export default function Hero() {
         </h1>
         <p className="lead hero-lead">{marketing.hero.lead}</p>
         <div className="hero-actions">
-          <a className="btn btn-primary" href={marketing.hero.primaryCta.href}>{marketing.hero.primaryCta.label}</a>
+          <Link className="btn btn-primary" to={marketing.hero.primaryCta.href}>{marketing.hero.primaryCta.label}</Link>
           <a className="btn btn-ghost" href={marketing.hero.secondaryCta.href} target="_blank" rel="noreferrer">{marketing.hero.secondaryCta.label}</a>
         </div>
         <div className="hero-chips" aria-label="Highlights">
