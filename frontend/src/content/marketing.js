@@ -3,7 +3,7 @@ export const marketing = {
     eyebrow: 'Speech Intelligence / Concept Lab',
     title: ['FRACTURED', 'SPEECH,', 'GUIDED', 'MOMENTUM.'],
     lead: 'FLOWspeak turns hesitation into visible rhythm. Detect patterns, decode friction, and practice fluency in a bold editorial-tech lab.',
-    primaryCta: { label: 'Launch Stutter Lab', href: '#stutter-lab' },
+    primaryCta: { label: 'Launch Stutter Lab', href: '/stutter-help' },
     secondaryCta: { label: 'Watch Demo', href: 'https://www.youtube.com/watch?v=LUXPLMexKSI', external: true },
     chips: ['Real-time guidance', 'Embedded demos', 'Designed for momentum']
   },
@@ -35,7 +35,7 @@ export const marketing = {
       { quote: 'The lab gives stutter patterns a shape you can actually work with.', author: 'Mina Park', role: 'Speech Researcher, Concept Testimonial' }
     ],
     press: ['FORM / CONCEPT', 'KINETIC REVIEW', 'EDITORIAL TECH', 'A11Y FUTURES'],
-    team: ['Raghavan R', 'Derrick Richard', 'Tarun Srikumar', 'Sreenidhi K'],
+    team: ['Derrick Richard', 'Tarun Srikumar', 'Sreenidhi K'],
     links: [
       { label: 'Demo Video', href: 'https://www.youtube.com/watch?v=LUXPLMexKSI' },
       { label: 'Setup Video', href: 'https://www.youtube.com/watch?v=mrcyOX2VKk4' }
