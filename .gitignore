@@ -3,3 +3,6 @@ graphify-out/
 docs/
 */.DS_Store
 .DS_Store
+.vercel/
+.env
+.env.local
