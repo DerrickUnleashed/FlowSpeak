@@ -2,7 +2,6 @@
 # Problem Statement
 Develop a deep learning-based and NLP system that detects, classifies, and auto-completes stuttered speech in real-time, improving accessibility and communication.
 # Team Members:
-Raghavan R ,
 Derrick Richard ,
 Tarun Srikumar ,
 Sreenidhi K
