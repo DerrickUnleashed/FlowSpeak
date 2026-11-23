@@ -9,6 +9,8 @@ const STUTTER_TYPES = [
   { type: 'Word Repeat', details: 'Repetition of entire words, like “I-I-I want”.' },
 ];
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5500';
+
 const StutterHelp = () => {
   const [isRecording, setIsRecording] = useState(false);
   const [transcribedText, setTranscribedText] = useState('');
@@ -30,7 +32,7 @@ const StutterHelp = () => {
 
   const sendToBackend = useCallback(async (text) => {
     try {
-      const response = await fetch('http://localhost:5500/api/process-speech', {
+      const response = await fetch(`${API_BASE}/api/process-speech`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ speech: text }),
