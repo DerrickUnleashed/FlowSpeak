@@ -1,28 +1,30 @@
 :root {
   --bg: #0b0b0c;
-  --bg-elev: #141417;
+  --bg-elev: #141416;
   --surface: #17181c;
   --surface-2: #1f2127;
   --text: #f3f1ea;
-  --muted: #b7b3aa;
+  --muted: #6b7280;
   --dim: #7e7b75;
-  --line: rgba(243, 241, 234, 0.14);
-  --line-strong: rgba(243, 241, 234, 0.28);
-  --accent: #d6ff3f;
-  --accent-ink: #0b0b0c;
+  --line: rgba(243, 241, 234, 0.08);
+  --line-strong: rgba(243, 241, 234, 0.16);
+  --accent-low: #7c3aed;
+  --accent-high: #d6ff3f;
+  --accent-main: #08fdd8;
+  --accent: var(--accent-high);
   --warn: #ffb454;
   --danger: #ff6b6b;
-  --shadow: 0 20px 80px rgba(0,0,0,.35);
+  --shadow: 0 20px 80px rgba(0,0,0,.45);
 
   --font-display: 'Bricolage Grotesque', 'Arial Narrow', sans-serif;
   --font-body: 'Instrument Sans', 'Helvetica Neue', sans-serif;
 
-  --step--1: clamp(0.82rem, 0.78rem + 0.2vw, 0.95rem);
-  --step-0: clamp(1rem, 0.96rem + 0.25vw, 1.125rem);
-  --step-1: clamp(1.25rem, 1.1rem + 0.8vw, 1.75rem);
-  --step-2: clamp(1.75rem, 1.35rem + 1.8vw, 3rem);
-  --step-3: clamp(2.6rem, 1.8rem + 3.6vw, 5.2rem);
-  --step-4: clamp(3.4rem, 2rem + 6.5vw, 8.5rem);
+  --step--1: clamp(0.82rem, 0.76rem + 0.3vw, 0.95rem);
+  --step-0: clamp(1rem, 0.94rem + 0.3vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.08rem + 0.6vw, 1.75rem);
+  --step-2: clamp(1.75rem, 1.3vmax, 3rem);
+  --step-3: clamp(2.6rem, 1.6vmax, 5.2rem);
+  --step-4: clamp(3.4rem, 1.8vmax, 8.5rem);
 
   --space-1: 0.5rem;
   --space-2: 0.75rem;
@@ -31,14 +33,17 @@
   --space-5: 2rem;
   --space-6: 3rem;
   --space-7: 5rem;
-  --space-8: clamp(5rem, 8vw, 9rem);
+  --space-8: clamp(5rem, 9vw, 9rem);
 
-  --radius: 2px;
-  --container: min(1440px, calc(100vw - 2 * var(--gutter)));
-  --gutter: clamp(1rem, 4vw, 3rem);
-  --nav-h: 4.75rem;
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --t-fast: 180ms;
-  --t-med: 360ms;
+  --radius: 4px;
+  --container: min(1600px, calc(100vw - 2 * var(--gutter)));
+  --gutter: clamp(1rem, 3vw, 2rem);
+  --nav-h: 5rem;
+  --ease-out: cubic-bezier(0.0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast: 200ms;
+  --t-med: 400ms;
   --t-slow: 700ms;
+  --spring-stiffness: 150;
+  --spring-damping: 20;
 }
