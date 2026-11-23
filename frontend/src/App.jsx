@@ -20,6 +20,7 @@ function Nav() {
     <header className="nav-wrap">
       <nav className="nav container" aria-label="Primary">
         <Link className="brand" to="/" onClick={() => setOpen(false)} aria-label="FLOWspeak home">
+          <img className="brand-logo" src="/fslogov1.png" alt="FLOWspeak" width="2131" height="738" />
           <span className="brand-mark">FLOW</span><span className="brand-rest">speak</span>
         </Link>
         <button
