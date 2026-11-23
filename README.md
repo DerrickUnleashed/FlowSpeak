@@ -14,12 +14,8 @@ FLOWspeak is a real-time speech intelligence prototype that makes disfluency vis
 
 ## Key Features
 
-- **Parallax hero signature moment** — GSAP ScrollTrigger pin plus Lenis smooth scroll; headline shards align and waveform ribbons calm as you scroll through one viewport of hero.
 - **Stutter Help lab (`/stutter-help`)** — browser Web Speech API transcription, live circular audio visualizer, top-word and word-combination suggestions from a BERT fill-mask backend, and a simulated pattern label. Microphone access starts only after a user click.
 - **Therapy lab (`/therapy`)** — paced reading with a moving highlight, adjustable auto-highlight speed (CPM), speech-follow highlighting, recording timer, and playback-speed control.
-- **Editorial design system** — dark tokenized palette, fluid type scale (`Bricolage Grotesque` display, `Instrument Sans` body), hairline grid, and consistent focus/reduced-motion behavior on every page.
-- **Performance discipline** — labs lazy-loaded on their own routes, transform/opacity-only motion, `prefers-reduced-motion` static fallback, keyboard-operable controls, and mobile layouts designed rather than shrunk.
-- **Flask inference API** — `POST /api/process-speech` returns context-aware word suggestions from a locally stored BERT model.
 
 ## Tech Stack & Prerequisites
 
@@ -63,14 +59,6 @@ FLOWspeak is a real-time speech intelligence prototype that makes disfluency vis
    ```
    ./scripts/dev.sh
    ```
-
-### Pages
-
-| Route | What it does |
-| --- | --- |
-| `/` | Marketing landing page: parallax hero, tension, system, proof, contact. No lab UI. |
-| `/stutter-help` | Live speech detection lab. Click **Start session**, allow the microphone, speak, then tap suggested words to insert or remove them. |
-| `/therapy` | Paced reading lab. Use **Auto-highlight** to follow the text at a chosen CPM, or click record to speak along. |
 
 ### Demos
 
